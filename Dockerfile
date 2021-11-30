@@ -1,8 +1,5 @@
-#step 1
-FROM alpine
+FROM python:latest 
 
-#step 2
-RUN apk add --update redis
+COPY test.py /
 
-#step 3
-CMD ["redis-server"]
+CMD ["python", "./test.py"]
